@@ -106,6 +106,18 @@ public  class Stacks {
         System.out.println(stack);
      */ 
 
+        System.out.println(stack);
+        System.out.println();
+
+        // get the item on index i of the stack. works from top to bottom 
+        System.out.println(stack.get(4));
+        System.out.println(stack.get(2));
+        System.out.println();
+
+
+        // see if a stack contains a particular value 
+        System.out.println(stack.contains("GTA V"));
+
         // uses of stacks 
         // 1. its good for undo redo features in text editors like word. 
         // 2. its good for moving back or forward through browser history like chrome 

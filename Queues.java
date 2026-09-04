@@ -94,6 +94,19 @@ public  class Queues {
         System.out.println(queue.contains("ZRK"));
         System.out.println();
 
+        // rn
+        System.out.println(queue);
+        System.out.println();
+
+        
+
+        
+
+        // where can queues be useful 
+        // 1. Keyboard buffers (letters appear in the screen in order they are pressed)
+        // 2. Printer queue (Print jobs should be completed in order)
+        // 3. Used in LinkedList, PriortityQueues and Breadth First Search 
+
 
 
 
