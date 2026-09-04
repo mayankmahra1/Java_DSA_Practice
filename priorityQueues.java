@@ -23,6 +23,7 @@ public  class priorityQueues {
         while(!queue.isEmpty()){
             System.out.println(queue.poll());
         }
+        System.out.println();
 
         // but why might we want to put these in order this way
         // lets say whoever pefroms worst gets 1 hour of free tutoring. 2nd worst is 2 hours of free tutoring and so on 
@@ -43,6 +44,8 @@ public  class priorityQueues {
         queue1.offer("F"); 
         queue1.offer("D"); 
 
+        // here it prints in alphabeltic order if we need reverse alphabetic then 
+        // PriorityQueue<String> queue1 = new PriorityQueue<>(Collections.reverseOrder());  
         while(!queue1.isEmpty()){
             System.out.println(queue1.poll());
         }
