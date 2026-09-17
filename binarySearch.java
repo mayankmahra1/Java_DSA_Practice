@@ -8,30 +8,57 @@ public class binarySearch {
         // half of the array is elimnated during the first step
 
         // binary search isnt to efficent when working with small datasets 
-        // however if you working wiht a large dataset like 1m elements than a binary search is fantastic because 
+        // however if you are working wiht a large dataset like 1m elements than a binary search is fantastic because 
         // we are elimanting half of the elements during each phase
         
         // run time complexity is O(log n)
         // the larger the dataset a binary search becomes more and more efficent compared to other algorithims 
 
-        // builit in ArrayList binary search 
+        // A huge disadvantage of binary search is that you have to sort the array first
 
-        int[] array = new int[100]; 
-        int target = 42; 
+        // The Arrays class has a built in Binaray search function. 
+
+        int[] array = new int[100];  
 
         for(int i = 0; i < array.length; i++){
             array[i] = i; 
          }
 
-        // returns -1 if not found
-        int index = Arrays.binarySearch(array, target); 
+        // returns index 
+        System.out.println(Arrays.binarySearch(array, 50));
+        // returns -101 if not found 
+        System.out.println(Arrays.binarySearch(array, 400));
+        System.out.println();
 
-        System.out.println(index);
+        System.out.println(ownBinarySearch(array, 50));
+        System.out.println(ownBinarySearch(array, 400));
 
+    }
 
+    // Im going to code my own Binary Seacrh from scratch
+    static int ownBinarySearch(int[] array, int target){
 
-        // our own binary search 
-        
+        int start = 0;
+        int end = array.length-1; 
+        Arrays.sort(array);
 
+        while (start <= end) {
+
+            int middle = start + (end-start) / 2;
+
+            if(array[middle] == target){
+                return middle; 
+                
+            }
+            else if(target > array[middle]){
+                start = middle +1 ; 
+            }
+            else if(target < array[middle]){
+               end = middle - 1;
+            }
+
+        }
+
+        return -1;
     }
 }
