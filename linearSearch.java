@@ -9,8 +9,8 @@ public class linearSearch {
 
         // Advs: 
         // fast for searches of small to medium datasets 
-        // does not need to be sorted 
-        // Useful for data structures that do not have random acesss (Linked lists )
+        // does not need to be sorted which is a huge benfit over binary search 
+        // Useful for data structures that do not have random acesss (Linked lists)
         
         int[] array = {9,1,8,2,7,6,3,4,5};  
         
