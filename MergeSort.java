@@ -31,65 +31,9 @@ public class MergeSort {
         // compared to insertion/selection/bubble sort which has space complexity of O(1) constant space 
         // because they sort in place and so they u a constant amount of space to do their sorting 
 
-        int[] array = {8,2,5,3,4,7,6,1};
-
-        mergeSort(array);
-        
-
-
-        
-    }
-
-    static void mergeSort(int[] array) {
-
-        int length = array.length;
-
-        if (length <= 1) {
-            return;
-        }
-
-        int middle = length/2; 
-
-        int[] leftArray = new int[middle];
-        int[] rightArray = new int[length - middle];
-
-        
-        for(int i = 0; i < leftArray.length; i++){
-            leftArray[i] = array[i];
-        }
-
-        int temp = middle;
-
-        for(int i = 0; i < rightArray.length; i++){
-            rightArray[i] = array[temp];
-            temp++; 
-        }
-
-        for(int i : array){
-            System.out.print(i + " ");
-        }
-        System.out.println();
-
-        for(int i : leftArray){
-            System.out.print(i + " ");
-        }
-        System.out.println();
-
-        for(int i : rightArray){
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        System.out.println();
-
-        mergeSort(leftArray);
-        mergeSort(rightArray);
-        
-        
-        
-    }
-
-    static void merge(int[] leftArray, int[] rightArray, int[] array){
-
+        // MergeSort = recursivley divides an array 2, sorts them, then re comibes them 
+        // it has run time complexity of O(n log n)
+        // it has space complexity O(n) 
 
 
     }
