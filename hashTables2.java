@@ -166,23 +166,28 @@ public class hashTables2 {
 
     	// Hashtable = A data structure that stores unique keys to values ex.<Integer, String>
         //             when you declare a hashtable you state the data types of what your storing and these are
-        //             refernce data types 
+        //             refernce data types. 
+        //             If not reference use the appropriate wrapper class
     	//			   Each key/value pair is known as an Entry
-    	//			   FAST insertion, look up, deletion of key/value pairs
+    	//			   Hashtables have FAST insertion, look up, deletion of key/value pairs
     	// 			   Not ideal for small data sets, great with large data sets
     	
-    	// hashing = Takes a key and computes an integer (formula will vary based on key & data type)
-    	//		       In a Hashtable, we use the hash % capacity to calculate an index number 
+    	// hashing in context of hash tables
+        //  = Takes a key and computes an integer (formula will vary based on key & data type)
+    	//  In a Hashtable, we use the hash % capacity to calculate an index number 
     	
-    	//			key.hashCode() % capacity = index  
+    	// To calculate and index we follow this formula:			key.hashCode() % capacity = index  
     	
-    	// bucket = an indexed storage location for one or more Entries
+    	// Each index is aka bucket = an indexed storage location for one or more Entries
     	//	            can store multiple Entries in case of a collision (linked similarly a LinkedList)
     	
     	// collision = hash function generates the same index for more than one key
     	//			less collisions = more efficiency
     	
-    	// Runtime complexity: Best Case O(1)
-    	//                                     Worst Case O(n)
+    	// Runtime complexity: If there are no collison the Best Case is a 
+        // runtime complexity of  O(1) Constant time
+    	// If there are exclusively collisons as in we place all of our entries within the same bucket
+        // Its going to be one big LL and the run time complexity of a LL is O(n). So Worst Case O(n) linear time
+        // On average the run time complexity of hashtable will be somewhere between this range 
     
 }

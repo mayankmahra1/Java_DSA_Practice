@@ -27,9 +27,10 @@ public class hashTables {
         // so hash of 100 is 100 
         // now after finding the hash of all your keys what can we do
         // these numbers are way too large and the size of our hash table is only ten elements
-        // what we will do is take each of  these hashes and divide/% them by the capacity
-        // the capacity being the size of our hashtable 
-        // so take each has divide it by the capacity of our hash table whatever the remainder is we will use the remainder as our index
+        // what we will do is take each of these hashes and divide(/%) them by the capacity
+        // the capacity being how many entries our hastable can store vertically
+        // so take each hash divide it by the capacity of our hash table whatever the remainder is 
+        // we will use the remainder as our index
         // and to find the remainder we will use the % operator 
         // but what if two hashes are calculated to have the same remainder
         // that is known as a collison 
@@ -73,7 +74,7 @@ public class hashTables {
         // thats the most common solution when there is a collison but ideally you would want each of these entries to be within 
         // there own bucket 
         // this process is known as chaining 
-        // the less collisons there are the more efficent this hash table is going to look up  a value 
+        // the less collisons there are the more efficent this hash table is going to look up a value 
         // ideally you want each entry to be in its own bucket but collisons are possible 
         
         // to reduce collisons you can increase the size of the hash table 
